@@ -2,6 +2,8 @@ package ut.programming.training;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 import org.apache.commons.lang3.StringUtils;
 
 public class Application {
@@ -20,6 +22,12 @@ public class Application {
 	}
     }
     
+    public void dict() {
+	Map<String, String> map = new HashMap<String, String>();
+	map.put("name", "Alex Unstoppable")
+	System.out.println(map.get("dog"));
+    }
+
     public Application() {
         System.out.println ("Inside Application");
     }
@@ -31,5 +39,6 @@ public class Application {
         app.greet();
         int count = app.countWords("I have five words ha.");
         System.out.println("Word Count: " + count);
+	app.dict();
     }
 }
