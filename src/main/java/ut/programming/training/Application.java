@@ -24,8 +24,8 @@ public class Application {
     
     public void dict() {
 	Map<String, String> map = new HashMap<String, String>();
-	map.put("name", "Alex Unstoppable")
-	System.out.println(map.get("dog"));
+	map.put("name", "Alex Unstoppable");
+	System.out.println("Dict: " + map.get("name"));
     }
 
     public Application() {
