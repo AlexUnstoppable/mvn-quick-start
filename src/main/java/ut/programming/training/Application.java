@@ -24,8 +24,13 @@ public class Application {
     
     public void dict() {
 	Map<String, String> map = new HashMap<String, String>();
+<<<<<<< HEAD
 	map.put("name", "Alex Unstoppable");
 	System.out.println("Dict: " + map.get("name"));
+=======
+	map.put("name", "Alex Unstoppable")
+	System.out.println(map.get("dog"));
+>>>>>>> a9b0d95ca523cceadccca9cf54fb461e7826905b
     }
 
     public Application() {
@@ -40,5 +45,6 @@ public class Application {
 	app.dict();
         int count = app.countWords("I have five words ha.");
         System.out.println("Word Count: " + count);
+	app.dict();
     }
 }
