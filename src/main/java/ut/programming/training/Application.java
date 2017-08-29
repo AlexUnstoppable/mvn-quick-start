@@ -37,8 +37,8 @@ public class Application {
       	System.out.println ("Starting Application");
     	Application app = new Application();
         app.greet();
+	app.dict();
         int count = app.countWords("I have five words ha.");
         System.out.println("Word Count: " + count);
-	app.dict();
     }
 }
