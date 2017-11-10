@@ -1,5 +1,8 @@
 pipeline {
-    agent none 
+    agent none  
+    tools {
+	maven 'Maven_local'
+    }
     environment {
         KITTENS = "furry"
         BANANAS = "great"
