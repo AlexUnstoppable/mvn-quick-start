@@ -77,6 +77,8 @@ pipeline {
         stage("Build") {
             steps {
                 echo 'Building ....'
+                sh 'make'
+                archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
             }
             post {
                 always {
@@ -137,6 +139,11 @@ pipeline {
             }
         }
         stage("deploy: staging") {
+            when {
+			  expression {
+				currentBuild.result == null || currentBuild.result == 'SUCCESS' 
+			  }
+            }
             steps {
                 echo 'Deploying....'
             }
