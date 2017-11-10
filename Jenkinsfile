@@ -1,8 +1,5 @@
 pipeline {
     agent none 
-    options {
-        timeout(time: 2, unit: 'MINUTES')
-    }
     environment {
         KITTENS = "furry"
         BANANAS = "great"
