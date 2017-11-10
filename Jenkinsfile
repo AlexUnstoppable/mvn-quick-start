@@ -75,6 +75,9 @@ pipeline {
             }
         }   
         stage("Build") {
+	    agent {
+                label 'Linux'
+            }
             steps {
                 echo 'Building ....'
                 sh 'make'
